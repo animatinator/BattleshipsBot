@@ -1,0 +1,6 @@
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\bin\Debug\BattleshipsBot.dll
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\bin\Debug\BattleshipsBot.pdb
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\bin\Debug\BattleshipsInterface.dll
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\obj\Debug\BattleshipsBot.dll
+C:\Users\David\documents\visual studio 2010\Projects\BattleshipsBot\BattleshipsBot\obj\Debug\BattleshipsBot.pdb

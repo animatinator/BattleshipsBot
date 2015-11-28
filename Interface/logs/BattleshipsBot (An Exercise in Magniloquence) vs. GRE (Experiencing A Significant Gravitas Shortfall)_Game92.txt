@@ -1,0 +1,104 @@
+Player 1: GRE (Experiencing A Significant Gravitas Shortfall)
+Player 2: BattleshipsBot (An Exercise in Magniloquence)
+Timeout : 500 ms
+
+             GRE                   BattleshipsBot
+   
+      1 2 3 4 5 6 7 8 9 10        1 2 3 4 5 6 7 8 9 10
+     _____________________       _____________________
+   A |.|.|.|.|S|S|S|.|.|.|     A |D|.|.|.|.|.|.|.|.|.|
+   B |.|.|.|.|.|.|.|.|.|.|     B |D|.|.|.|.|.|.|.|.|A|
+   C |.|.|.|.|A|.|.|.|.|.|     C |D|.|.|.|.|.|.|.|.|A|
+   D |.|.|.|.|A|.|.|.|.|.|     D |.|.|.|.|.|.|.|S|.|A|
+   E |.|.|.|.|A|.|.|.|.|.|     E |.|.|.|.|.|.|.|S|.|A|
+   F |.|.|.|.|A|.|.|.|.|.|     F |.|.|.|.|.|.|.|S|.|A|
+   G |D|D|D|.|A|.|.|.|.|.|     G |B|B|B|B|.|.|.|.|.|.|
+   H |.|.|.|.|.|.|.|.|P|P|     H |.|.|.|.|.|.|P|.|.|.|
+   I |.|.|.|.|.|.|.|.|.|.|     I |.|.|.|.|.|.|P|.|.|.|
+   J |.|.|B|B|B|B|.|.|.|.|     J |.|.|.|.|.|.|.|.|.|.|
+     ---------------------       ---------------------
+
+
+    1.  H08      J07    
+    2.  H10      J01    
+    3.  G09      J05 +  
+    4.  I09      A05 +  
+    5.  C06      I05    
+    6.  D03      B05    
+    7.  B07      J03 +  
+    8.  I04      J02    
+    9.  H05      J04 +  
+   10.  F05      J05 +  
+   11.  D07      J06 +! 
+   12.  G06      J07    
+   13.  A02      I10    
+   14.  E02      H05    
+   15.  C08      J09    
+   16.  A04      H01    
+   17.  C10 +    G04    
+   18.  C09      H03    
+   19.  B10 +    I08    
+   20.  D10 +    G02 +  
+   21.  B09      H02    
+   22.  A10      G03 +  
+   23.  D09      G01 +! 
+   24.  E10 +    G04    
+   25.  E09      H07    
+   26.  F10 +!   E02    
+   27.  F09      D01    
+   28.  G10      C10    
+   29.  G02 +    H09 +  
+   30.  G01 +    G09    
+   31.  G03 +    H10 +! 
+   32.  F02      H01    
+   33.  H02      H08    
+   34.  F01      F09    
+   35.  H01      E08    
+   36.  G04 +!   D07    
+   37.  F03      E10    
+   38.  H03      F07    
+   39.  G05      E06    
+   40.  F04      D09    
+   41.  H04      B09    
+   42.  C02      C06    
+   43.  H09      A08    
+   44.  D05      D05 +  
+   45.  A06      D04    
+   46.  D01      E05 +  
+   47.  E04      C05 +  
+   48.  C04      B05    
+   49.  B01 +    F05 +  
+   50.  B02      G05 +! 
+   51.  A01 +    H05    
+   52.  C01 +!   D03    
+   53.  E06      C08    
+   54.  J05      B07    
+   55.  J07      C02    
+   56.  I06      B01    
+   57.  E08 +    A10    
+   58.  E07      B03    
+   59.  D08 +    A02    
+   60.  F08 +! 
+
+GRE (Experiencing A Significant Gravitas Shortfall) won the game by victoryException
+
+GRE clock: 4 ms
+BattleshipsBot clock: 5 ms
+
+Error thrown: System.Exception: No valid diagonals :(
+
+Server stack trace: 
+   at BattleshipsBot.BattleshipsPlayer.SelectTarget(Char& row, Int32& column)
+   at BattleshipsAdjudicator.CrossDomainPlayerWrapper.SelectTarget(Char& row, Int32& column)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at BattleshipsInterface.IBattleshipsPlayer.SelectTarget(Char& row, Int32& column)
+   at BattleshipsAdjudicator.Adjudicator.<>c__DisplayClassd.<TakeTurn>b__b()
+   at BattleshipsAdjudicator.WaitFor`1.Run(Func`1 function)
+   at BattleshipsAdjudicator.WaitFor`1.Run(TimeSpan timeout, Func`1 function)
+   at BattleshipsAdjudicator.Adjudicator.TakeTurn(Int32 turnCounter, IBattleshipsPlayer playerA, ShipSet playerBShips, Timer playerATimer)
+   at BattleshipsAdjudicator.Adjudicator.RunGame()

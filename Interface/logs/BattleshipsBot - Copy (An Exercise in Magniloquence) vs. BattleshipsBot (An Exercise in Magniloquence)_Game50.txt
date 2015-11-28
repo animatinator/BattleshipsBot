@@ -1,0 +1,97 @@
+Player 1: BattleshipsBot (An Exercise in Magniloquence)
+Player 2: BattleshipsBot - Copy (An Exercise in Magniloquence)
+Timeout : 500 ms
+
+       BattleshipsBot           BattleshipsBot - Copy
+   
+      1 2 3 4 5 6 7 8 9 10        1 2 3 4 5 6 7 8 9 10
+     _____________________       _____________________
+   A |.|.|.|.|.|.|.|.|.|A|     A |.|.|.|.|.|.|.|.|.|.|
+   B |.|.|.|.|.|.|.|.|.|A|     B |S|.|.|.|.|.|.|.|.|.|
+   C |.|.|.|B|.|S|.|.|.|A|     C |S|.|.|.|.|.|.|.|.|.|
+   D |.|.|.|B|.|S|.|.|.|A|     D |S|.|.|B|B|B|B|.|P|P|
+   E |D|.|.|B|.|S|.|.|.|A|     E |.|.|.|.|.|.|.|.|.|.|
+   F |D|.|.|B|.|.|.|.|.|.|     F |D|.|.|.|.|.|.|.|.|.|
+   G |D|.|.|.|.|.|.|.|.|.|     G |D|.|.|.|.|.|.|.|.|.|
+   H |.|.|.|.|.|.|.|.|.|.|     H |D|.|.|.|A|A|A|A|A|.|
+   I |.|.|P|.|.|.|.|.|.|.|     I |.|.|.|.|.|.|.|.|.|.|
+   J |.|.|P|.|.|.|.|.|.|.|     J |.|.|.|.|.|.|.|.|.|.|
+     ---------------------       ---------------------
+
+
+    1.  J10      J08    
+    2.  I09      J10    
+    3.  J02      J06    
+    4.  J04      J02    
+    5.  I03      I05    
+    6.  J08      I09    
+    7.  J06      H08    
+    8.  H08 +    I07    
+    9.  H09 +    H06    
+   10.  H07 +    G05    
+   11.  H06 +    H04    
+   12.  H05 +!   J04    
+   13.  H04      G07    
+   14.  H10      I01    
+   15.  F04      F04 +  
+   16.  I01      F03    
+   17.  H02      E04 +  
+   18.  F06      D04 +  
+   19.  G03      G04    
+   20.  F02      C04 +! 
+   21.  G01 +    B04    
+   22.  G10      I03 +  
+   23.  G02      I04    
+   24.  F01 +    I02    
+   25.  E01      J03 +! 
+   26.  H01 +!   H03    
+   27.  I01      A03    
+   28.  D10 +    G01 +  
+   29.  C10      H01    
+   30.  E10      F01 +  
+   31.  D01 +    E01 +! 
+   32.  D02      D01    
+   33.  D09 +!   C01    
+   34.  D08      D10 +  
+   35.  F10      D09    
+   36.  B08      D01    
+   37.  F08      C10 +  
+   38.  E07      E10 +  
+   39.  D06 +    B10 +  
+   40.  D07 +    F10    
+   41.  D05 +    A10 +! 
+   42.  D08      D08    
+   43.  D04 +!   H10    
+   44.  D03      F06    
+   45.  B06      C07    
+   46.  A05      B08    
+   47.  A07      B02    
+   48.  B10      B06    
+   49.  B02      A07    
+   50.  B04      G09    
+   51.  A01      F08    
+   52.  A09      A05    
+   53.  A03      A01    
+
+BattleshipsBot - Copy (An Exercise in Magniloquence) won the game by victoryException
+
+BattleshipsBot clock: 5 ms
+BattleshipsBot - Copy clock: 4 ms
+
+Error thrown: System.Exception: No valid diagonals :(
+
+Server stack trace: 
+   at BattleshipsBot.BattleshipsPlayer.SelectTarget(Char& row, Int32& column)
+   at BattleshipsAdjudicator.CrossDomainPlayerWrapper.SelectTarget(Char& row, Int32& column)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink._PrivateProcessMessage(IntPtr md, Object[] args, Object server, Object[]& outArgs)
+   at System.Runtime.Remoting.Messaging.StackBuilderSink.SyncProcessMessage(IMessage msg)
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at BattleshipsInterface.IBattleshipsPlayer.SelectTarget(Char& row, Int32& column)
+   at BattleshipsAdjudicator.Adjudicator.<>c__DisplayClassd.<TakeTurn>b__b()
+   at BattleshipsAdjudicator.WaitFor`1.Run(Func`1 function)
+   at BattleshipsAdjudicator.WaitFor`1.Run(TimeSpan timeout, Func`1 function)
+   at BattleshipsAdjudicator.Adjudicator.TakeTurn(Int32 turnCounter, IBattleshipsPlayer playerA, ShipSet playerBShips, Timer playerATimer)
+   at BattleshipsAdjudicator.Adjudicator.RunGame()
